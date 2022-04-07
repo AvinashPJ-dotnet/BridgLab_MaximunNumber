@@ -10,26 +10,9 @@ public class Main {
         System.out.println("maximum String is: "+maxString);
     }
 
-    private static Integer testMaximum(Integer first, Integer second, Integer third) {
-        Integer max = first;
-        if(second.compareTo(max)>0)
-            max=second;
-        if(third.compareTo(max)>0)
-            max=third;
-        return max;
-    }
-
-    private static Float testMaximum(Float first, Float second, Float third) {
-        Float max = first;
-        if(second.compareTo(max)>0)
-            max=second;
-        if(third.compareTo(max)>0)
-            max=third;
-        return max;
-    }
-
-    private static String testMaximum(String first, String second, String third) {
-        String max = first;
+    // used generic class extends comparable to take any Wrapper class as parameter
+    private static  <E extends Comparable<E>> E testMaximum(E first, E second, E third) {
+        E max = first;
         if(second.compareTo(max)>0)
             max=second;
         if(third.compareTo(max)>0)
